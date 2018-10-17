@@ -1,2 +1,2 @@
 # data-structures-and-algorithms
-code-challenge-01
+Code Fellows 401 daily whiteboard code-challenge
