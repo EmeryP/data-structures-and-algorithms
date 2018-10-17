@@ -1,5 +1,5 @@
 # data-structures-and-algorithms
-Code Fellows 401 daily whiteboard code-challenge-02
+Code Fellows 401 daily whiteboard code-challenge-01
 
 ## Challenge
 The challenge was to write a function without using built in javascript methods to insert an input value into the middle of an array.
