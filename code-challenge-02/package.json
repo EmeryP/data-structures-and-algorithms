@@ -1,0 +1,14 @@
+{
+  "name": "code-challenge-02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "array-shift.test.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^23.6.0"
+  }
+}
