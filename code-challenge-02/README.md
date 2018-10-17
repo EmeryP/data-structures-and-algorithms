@@ -12,7 +12,5 @@ Iterate through the input array and copy its values into a new array. When the i
 Emery Parks,
 David Chambers
 
-![Whiteboard](/assets/array-shift.jpg)
-
-### Checklist
+![Whiteboard](./assets/array-shift.jpg)
 
