@@ -3,18 +3,20 @@ module.exports = exports = {};
 
 exports.binarySearch = (arr, key) => {
   let start = 0;
-  let end = arr.length-1;
-  let mid = Math.ceil(arr.length / 2);
+  let end = arr.length;
+  let mid = Math.floor(arr.length / 2);
 
-  while(start < end){
-    mid = Math.ceil((start + end) / 2);
+  while(start <= end){
+    mid = Math.floor((start + end) / 2);
     if(arr[mid] < key){
-      start = mid;
+      start = mid+1;
     } else if(arr[mid] > key){
-      end = mid;
+      end = mid-1;
     }else{
       return mid;
     }
+  }
+  return -1
   }
 };
 
