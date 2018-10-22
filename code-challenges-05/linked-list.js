@@ -36,8 +36,8 @@ class LinkedList {
       data: val,
       next: this.head
     };
-    this.head = newNode;  
     // let newNode = new Node(val);
+    this.head = newNode;  
     // console.log(newNode, 'newnode')
   }
   
@@ -88,3 +88,56 @@ module.exports = sll;
 
 
 
+/*
+JB Code
+
+class LinkedList = {
+  constructor(node = null){
+    this.head = node;
+  }
+
+  insert(value){
+
+    const oldHead = this.head
+
+    //create node with given value
+    const newNode = new Node(value, oldHead);
+
+    //set new head's next to be old head
+    // newNode.next = this.head 
+
+    //set head to new node
+    this.head = newNode
+
+  }
+
+  includes(value){
+    //starting at head
+    let current = this.head
+
+    //ask each node if it has the value (loop) 
+    while(current){
+      if(current.value === value){
+        return true
+      }
+      current = current.next;
+    }
+    return false;
+    //if so return true, 
+    //if no move to next if not null
+  }
+}
+
+class Node = {
+  constructor(data, next = null){
+    this.data = data;
+    this.next = next;
+  }
+}
+
+
+module.exports = {
+  LinkedList, Node
+}
+
+*/
