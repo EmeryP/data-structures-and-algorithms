@@ -1,24 +1,20 @@
-# data-structures-and-algorithms
-CF 401 code-challenge-05
+# Singly Linked List
 
 ## Challenge
-The challenge was to write a function without using built in javascript methods to find an arbitrary value in an array. 
+Created methods to create singly linked lists. The methods include, `insert` to add values to a list, `includes` to check if the list includes a value, and `print` to print the contents of the list.
 
 ## Solution 
-Use a binary search algorithm to cut the array in half and search the halves until you have cut the array down to a point in which the searchKey is equal to the mid value of the array.
-
-
-# Singly Linked List
-<!-- Short summary or background information -->
-
-## Challenge
-<!-- Description of the challenge -->
+Create a Node and LinkedList class that can be used to run methods against to easily reproduce new Nodes.
 
 ## API
-<!-- Description of each method publicly available to your Linked List -->
+* The `insert` method can be invoked by calling `sll.insert(<value to add>)` and it will prepend the value to add to the singly linked list
+* The `includes` method can be invoked by calling `sll.includes(<value to find>)` and it will return a boolean suggesting whether or not the searched for value is included in the singly linked list.
+* The `print` method can be invoked by calling `sll.print()` and it will print out the data value of all the links in the list in their order.
 
 ### Credits
 
 https://codesandbox.io/s/kkqyy333o7
 
 https://www.youtube.com/watch?v=MozZbtPyqt8
+
+Instructor JB
