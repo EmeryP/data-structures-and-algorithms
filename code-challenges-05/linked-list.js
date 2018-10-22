@@ -1,15 +1,16 @@
-//testing 123
-// class Node {                                                                                        
-//   constructor(data){
-//     this.data = data;
-//     this.next = this.head;
-//   }
-// }
+
+
+class Node {                                                                                        
+  constructor(data, next = null){
+    this.data = data;
+    this.next = next;
+  }
+}
 
 class LinkedList {
 
-  constructor(){ 
-    this.head = null;
+  constructor(node = null){ 
+    this.head = node;
   }
 
   ///////////////////////////////
@@ -32,13 +33,9 @@ class LinkedList {
   //////////////////////////////
   insert(val){ 
 
-    let newNode = {
-      data: val,
-      next: this.head
-    };
-    // let newNode = new Node(val);
-    this.head = newNode;  
-    // console.log(newNode, 'newnode')
+    const oldHead = this.head
+    const newNode = new Node(val, oldHead)
+    this.head = newNode
   }
   
   /////////////////////////////
@@ -54,6 +51,17 @@ class LinkedList {
   }
 
   /////////////////////////////
+  append(val){
+    let current = this.head;
+
+    while(current.next !== null){
+      current = current.next
+    }
+    current.next = new Node(val)
+    console.log(current.next)
+  }
+
+  /////////////////////////////
   print(){
     var output = '[';
     var current = this.head;
@@ -66,6 +74,7 @@ class LinkedList {
           current = current.next;
     }
     output += ']';
+    console.log(output);
     return output;
   }
 
@@ -75,69 +84,13 @@ var sll = new LinkedList();
 sll.insert(20)
 sll.insert(30)
 sll.insert(40)
-sll.insert(50)
-sll.insert(60)
+sll.append(50)
 sll.insert(70)
-// sll.print()
-// console.log(sll)
-// console.log(sll.contains(20))
-// console.log(sll.size())
-// console.log(sll.isEmpty())
+sll.append(100)
 
-module.exports = sll;
-
-
-
-/*
-JB Code
-
-class LinkedList = {
-  constructor(node = null){
-    this.head = node;
-  }
-
-  insert(value){
-
-    const oldHead = this.head
-
-    //create node with given value
-    const newNode = new Node(value, oldHead);
-
-    //set new head's next to be old head
-    // newNode.next = this.head 
-
-    //set head to new node
-    this.head = newNode
-
-  }
-
-  includes(value){
-    //starting at head
-    let current = this.head
-
-    //ask each node if it has the value (loop) 
-    while(current){
-      if(current.value === value){
-        return true
-      }
-      current = current.next;
-    }
-    return false;
-    //if so return true, 
-    //if no move to next if not null
-  }
-}
-
-class Node = {
-  constructor(data, next = null){
-    this.data = data;
-    this.next = next;
-  }
-}
-
+sll.print()
 
 module.exports = {
   LinkedList, Node
-}
+};
 
-*/
