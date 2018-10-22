@@ -1,2 +1,2 @@
 ## Data Structures and Algorithms
-This repo contains 401 whiteboard challenges 
+This repo contains data structure and algorithm challenges
