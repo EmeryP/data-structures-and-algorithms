@@ -12,10 +12,12 @@ class LinkedList {
     this.head = null;
   }
 
+  ///////////////////////////////
   isEmpty(){
     return this.head === null;
   }
 
+  //////////////////////////////
   size(){
     var current = this.head;
     var count = 0;
@@ -27,31 +29,21 @@ class LinkedList {
     return count;
   }
 
+  //////////////////////////////
   insert(val){ 
 
     let newNode = {
       data: val,
       next: this.head
     };
-    // var node = new Node(val);
-
-    this.head = newNode;
-    // if(!this.head){ 
-    //   this.head = node;
-    //   return node;
-    // } else { 
-    //   console.log(this.head)
-    //   var current = this.head 
-    //   while(current.next){ 
-    //   }
-    // }
-    // current.next = node; 
-    // return node;    
+    this.head = newNode;  
+    // let newNode = new Node(val);
+    // console.log(newNode, 'newnode')
   }
   
-  contains(val){
+  /////////////////////////////
+  includes(val){
     var current = this.head;
-    console.log(current)
       while(current !== null){
         if(current.data === val){
           return true;
@@ -61,19 +53,20 @@ class LinkedList {
       return false;
   }
 
+  /////////////////////////////
   print(){
     var output = '[';
     var current = this.head;
 
-    while(current !== null){
-      output += current.data;
-      if(current.next !== null){
-        output += ',';
-      }
-      current = current.next;
+    while(current != null){
+        output += current.data;
+        if(current.next !== null){
+            output += ',';
+          }
+          current = current.next;
     }
     output += ']';
-    console.log(output);
+    return output;
   }
 
 }
@@ -85,19 +78,13 @@ sll.insert(40)
 sll.insert(50)
 sll.insert(60)
 sll.insert(70)
-sll.print()
-console.log(sll.contains(20))
-console.log(sll.size())
-console.log(sll.isEmpty())
+// sll.print()
+// console.log(sll)
+// console.log(sll.contains(20))
+// console.log(sll.size())
+// console.log(sll.isEmpty())
 
+module.exports = sll;
 
-
-// 60 is not pointing to 70
-
-
-//let nums = new LinkedList(); //sets nums = to a new linkedList and creates a head property
-//nums.head = new Node(1) //set the head value of new LinkedList to be a node with data property equal to 1 and next to null
-//nums.head.next = new Node(2); //sets next value to be equal to value of new Node with data property of 2
-// console.log(nums.head)
 
 

@@ -16,3 +16,9 @@ Use a binary search algorithm to cut the array in half and search the halves unt
 
 ## API
 <!-- Description of each method publicly available to your Linked List -->
+
+### Credits
+
+https://codesandbox.io/s/kkqyy333o7
+
+https://www.youtube.com/watch?v=MozZbtPyqt8
