@@ -50,12 +50,15 @@ class LinkedList {
     /////////////////////////////
     append(val){
       let current = this.head;
+      console.log(this.head, 'in the append')
       
       while(current.next !== null){
         current = current.next
       }
     current.next = new Node(val)
   }
+
+  
   
   /////////////////////////////
   print(){
@@ -74,6 +77,13 @@ class LinkedList {
       return output;
     }
   }
+
+  let sll = new LinkedList();
+
+  sll.insert(1)
+  sll.insert(3)
+  sll.append(2)
+  sll.print()
 
 module.exports = LinkedList
 
