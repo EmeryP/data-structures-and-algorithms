@@ -50,7 +50,7 @@ class LinkedList {
     /////////////////////////////
     append(val){
       let current = this.head;
-      console.log(this.head, 'in the append')
+      // console.log(this.head, 'in the append')
       
       while(current.next !== null){
         current = current.next
@@ -58,7 +58,27 @@ class LinkedList {
     current.next = new Node(val)
   }
 
-  
+  //////////////////////////////
+  kthFromTheEnd(k){
+    let lead = this.head;
+    let trailing = this.head;
+    let counter = 0;
+
+    while(lead.next != null){
+      counter++;
+      lead = lead.next;
+      if(counter > k){
+        trailing = trailing.next;
+      }
+    }
+    if(lead.next === null){
+      if(counter < k){
+        return 'Exception';
+      } else{
+      return trailing.data;
+      }
+    }
+  }
   
   /////////////////////////////
   print(){
@@ -73,17 +93,10 @@ class LinkedList {
         current = current.next;
       }
       output += ']';
-      console.log(output);
+      // console.log(output);
       return output;
     }
   }
-
-  let sll = new LinkedList();
-
-  sll.insert(1)
-  sll.insert(3)
-  sll.append(2)
-  sll.print()
 
 module.exports = LinkedList
 
