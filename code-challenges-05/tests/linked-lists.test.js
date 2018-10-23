@@ -90,4 +90,34 @@ describe('Singly Linked Lists', () => {
     })
   })
 
+  describe('kth from the end', () => {
+    it('find the -4th value from the end', () => {
+      const list = new LinkedList();
+      list.insert(20)
+      list.insert(30)
+      list.insert(40)
+      list.insert(50)
+      list.insert(60)
+      expect(list.kthFromTheEnd(4)).toBe(60);
+    })
+    it('find the -1st value from the end', () => {
+      const list = new LinkedList();
+      list.insert(20)
+      list.insert(30)
+      list.insert(40)
+      list.insert(50)
+      list.insert(60)
+      expect(list.kthFromTheEnd(1)).toBe(30);
+    })
+    it('check if kth from the end is defined', () => {
+      const list = new LinkedList();
+      list.insert(20)
+      list.insert(30)
+      list.insert(40)
+      list.insert(50)
+      list.insert(60)
+      expect(list.kthFromTheEnd(1)).toBeDefined();
+    })
+  })
+
 })
