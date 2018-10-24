@@ -12,6 +12,7 @@ Create a Node and LinkedList class that can be used to run methods against to ea
 * The `print` method can be invoked by calling `sll.print()` and it will print out the data value of all the links in the list in their order.
 * The `append` method can be invoked by calling `sll.append(<val to append>)` and it will append the value to the Linked List.
 * The `kthFromTheEnd` method can be invoked by running the tests with the Jest testing framework or calling `sll.kthFromTheEnd(<kth from the end value>)` in the `linked-list.js` file and running node `linked-list.js` from bash. The method will identify and return the value of the node that is in the position of kth from the end of the LinkedList. See solution image below for code-challenges-07 for visuals. 
+* The `mergeLists` method will zip together two linked lists and return the reference to the head of the ziped list. Warning this method doesnt exist today but will in the future.
 
 ### Credits
 
@@ -37,3 +38,9 @@ Used the same code base from the previous labs and added the kth from the end me
 
 ![Whiteboard](./assets/code-challenges-07.jpg)
 
+
+## Solution for code-challenge-08
+
+Used the same code base from the previous labs and added the merge method.
+
+![Whiteboard](./assets/code-challenges-08.jpg)
