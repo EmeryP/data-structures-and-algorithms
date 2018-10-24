@@ -41,6 +41,6 @@ Used the same code base from the previous labs and added the kth from the end me
 
 ## Solution for code-challenge-08
 
-Used the same code base from the previous labs and added the merge method.
+Used the same code base from the previous labs and added the merge method. Didnt write the code for now but will add asap.
 
 ![Whiteboard](./assets/code-challenges-08.jpg)
