@@ -1,5 +1,6 @@
 'use strict';
 
+
 class Node{
   constructor(value, next = null){
     this.value = value;
@@ -38,24 +39,29 @@ class Queue {
   }
 
   enqueue(valQ){
-    const oldFront = this.front;
-    const newNodeQ = new Node(valQ, oldFront);
-    this.front = newNodeQ;
-    this.storageQ.unshift(newNodeQ);
-    // assign front to be equal to the first node in the list
+
+    if(this.storageQ.length === 0){
+      const oldFront = this.front;
+      const newNodeQ = new Node(valQ, oldFront);
+      this.front = newNodeQ;
+      this.storageQ.unshift(newNodeQ);
+    } else {
+      const newNodeQ = new Node(valQ);      
+      this.storageQ.unshift(newNodeQ); 
+    }
   }
 
   dequeue(){
-    //assign front to the value of the following node
     return this.storageQ.pop();
-
   }
 
   peekQ(){
-    // return this.front.value;
-    return this.storageQ[this.storageQ.length-1].value;
+    return this.front.value;
   }
 }
 
-module.exports = Queue;
+
+module.exports = { 
+  Stack,
+  Queue };
 

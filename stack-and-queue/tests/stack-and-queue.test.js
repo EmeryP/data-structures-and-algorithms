@@ -4,17 +4,17 @@ let stacksAndQueues = require('../stack-and-queue.js');
 
 describe('Stacks and Queues', () => {
   
-  xdescribe('Stacks', () => {
+  describe('Stacks', () => {
 
     describe('Stacks -> Push', () => {
 
-      xit('The stack to be defined after a single push', () => {
+      it('The stack to be defined after a single push', () => {
         const sandq = new stacksAndQueues();
         sandq.push(10);
         expect(sandq).toBeDefined();
       });
 
-      xit('The length of the storage array should be 3 after 3 pushes', () => {
+      it('The length of the storage array should be 3 after 3 pushes', () => {
         const sandq = new stacksAndQueues();
         sandq.push(10);
         sandq.push(30);
@@ -32,7 +32,7 @@ describe('Stacks and Queues', () => {
 
     });
 
-    xdescribe('Stacks -> Pop', () => {
+    describe('Stacks -> Pop', () => {
 
       it('The pop method to be defined', () => {
         const sandq = new stacksAndQueues();
@@ -59,7 +59,7 @@ describe('Stacks and Queues', () => {
 
     });
 
-    xdescribe('Stacks -> Peek', () => {
+    describe('Stacks -> Peek', () => {
 
       it('Will test if peek is defined after one push', () => {
         const sandq = new stacksAndQueues();
@@ -91,13 +91,13 @@ describe('Stacks and Queues', () => {
 
     describe('Queues -> Enqueue', () => {
 
-      it('Will test if the queue is defined after a single enqueue', () => {
+      it('Will test if the queue is defined after invoking enqueue once', () => {
         const sandq = new stacksAndQueues();
         sandq.enqueue(10);
         expect(sandq).toBeDefined();
       });
 
-      it('The length of the storageQ array should be 3 after 3 enqueue calls', () => {
+      it('Will test the length of the storageQ array should be 3 after invoking enqueue 3x', () => {
         const sandq = new stacksAndQueues();
         sandq.enqueue(10);
         sandq.enqueue(30);
@@ -105,25 +105,25 @@ describe('Stacks and Queues', () => {
         expect(sandq.storageQ.length).toBe(3);
       });
 
-      it('The front of the queue should be equal to 40', () => {
+      it('Will test if the value of the Node at the front of the queue is equal to 10', () => {
         const sandq = new stacksAndQueues();
         sandq.enqueue(10);
         sandq.enqueue(30);
         sandq.enqueue(40);
-        expect(sandq.front.value).toBe(40);
+        expect(sandq.front.value).toBe(10);
       });
 
     });
 
     describe('Queues -> Dequeue', () => {
 
-      it('Will test if the dequeue method is defined', () => {
+      it('Will test if the dequeue method is defined after a single invocation', () => {
         const sandq = new stacksAndQueues();
         sandq.dequeue();
         expect(sandq).toBeDefined();
       });
 
-      it('The length of the storageQ array should be (3 - 1) = 2', () => {
+      it('Will test if dequeue returns the proper length of the queue after one invocation', () => {
         const sandq = new stacksAndQueues();
         sandq.enqueue(10);
         sandq.enqueue(30);
@@ -132,7 +132,7 @@ describe('Stacks and Queues', () => {
         expect(sandq.storageQ.length).toBe(2);
       });
 
-      it('The dequeued value should be equal to 40', () => {
+      it('The dequeued value should be equal to 10', () => {
         const sandq = new stacksAndQueues();
         sandq.enqueue(10);
         sandq.enqueue(30);
@@ -140,17 +140,30 @@ describe('Stacks and Queues', () => {
         expect(sandq.dequeue().value).toBe(10);
       });
 
+      xit('Will test if the front value is reassigned after a single invocation of dequeue', () => {
+        const sandq = new stacksAndQueues();
+        sandq.enqueue(10);
+        sandq.enqueue(30);
+        sandq.enqueue(40);
+        console.log(sandq.front.value);
+        console.log(sandq.storageQ);        
+        sandq.dequeue();
+        console.log(sandq.storageQ);                
+        console.log(sandq.front.value);        
+        // expect(sandq.front.value).toBe(30);
+      });
+
     });
 
     describe('Queues -> PeekQ', () => {
 
-      it('Will test if peekQ is defined after one enqueue', () => {
+      it('Will test if peekQ is defined after one enqueue invocation', () => {
         const sandq = new stacksAndQueues();
         sandq.enqueue(10);
         expect(sandq.peekQ()).toBeDefined();
       });
 
-      it('Will check if the front of the queue is equal to 10 after 3 enqueues', () => {
+      it('Will test if the value of the Node at the front of the queue is equal to the number 10 after 3 enqueue invocations', () => {
         const sandq = new stacksAndQueues();
         sandq.enqueue(10);
         sandq.enqueue(30);
@@ -158,7 +171,7 @@ describe('Stacks and Queues', () => {
         expect(sandq.peekQ()).toBe(10);
       });
 
-      it('Will check if the front of the stack is equal to the string peek', () => {
+      it('Will test if the value of the Node at the front of the queue is equal to the string peek', () => {
         const sandq = new stacksAndQueues();
         sandq.enqueue('front');
         sandq.enqueue(10);
@@ -167,8 +180,5 @@ describe('Stacks and Queues', () => {
       });
     });
   });
-
-
-
 
 });
