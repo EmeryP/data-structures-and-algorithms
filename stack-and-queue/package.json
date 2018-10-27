@@ -1,0 +1,18 @@
+{
+  "name": "stack-and-queue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "stack-and-queue.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^23.6.0"
+  }
+}
