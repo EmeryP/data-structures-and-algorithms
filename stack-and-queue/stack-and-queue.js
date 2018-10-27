@@ -25,7 +25,7 @@ class Stack{
   }
 
   peek(){
-    return this.storage[this.storage.length-1];
+    return this.top.value;
   }
 }
 

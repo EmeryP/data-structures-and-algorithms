@@ -12,7 +12,7 @@ describe('Stacks', () => {
       expect(sandq).toBeDefined();
     });
 
-    it('The length of the storage array should be 3', () => {
+    it('The length of the storage array should be 3 after 3 pushes', () => {
       const sandq = new stacksAndQueues();
       sandq.push(10);
       sandq.push(30);
@@ -32,7 +32,7 @@ describe('Stacks', () => {
 
   describe('Stacks -> Pop', () => {
 
-    xit('The pop method to be defined', () => {
+    it('The pop method to be defined', () => {
       const sandq = new stacksAndQueues();
       sandq.pop();
       expect(sandq).toBeDefined();
@@ -53,20 +53,19 @@ describe('Stacks', () => {
       sandq.push(30);
       sandq.push(40);
       expect(sandq.pop().value).toBe(40);
-      // console.log(sandq.pop().value);
     });
 
   });
 
-  xdescribe('Stacks -> Peek', () => {
+  describe('Stacks -> Peek', () => {
 
-    it('should test that peek is defined', () => {
+    it('Will test if peek is defined after one push', () => {
       const sandq = new stacksAndQueues();
       sandq.push(10);
       expect(sandq.peek()).toBeDefined();
     });
 
-    it('should check if the top of the stack is equal to 40', () => {
+    it('Will check if the top of the stack is equal to 40 after 3 pushes', () => {
       const sandq = new stacksAndQueues();
       sandq.push(10);
       sandq.push(30);
@@ -74,7 +73,15 @@ describe('Stacks', () => {
       expect(sandq.peek()).toBe(40);
     });
 
-  })
+    it('Will check if the top of the stack is equal to the string peek', () => {
+      const sandq = new stacksAndQueues();
+      sandq.push(10);
+      sandq.push(30);
+      sandq.push('peek');
+      expect(sandq.peek()).toBe('peek');
+    });
+
+  });
 
 
 
