@@ -18,6 +18,6 @@ My approach was to use a Node constructor and each time I pushed a Node to the S
 * `Peek`: Returns the value at the top of the stack, giving you a "peek".
 
 #### Queue
-* `Enqueue` Adds a value to the back of the queue
-* `Dequeeue` Removes a value from the front of the queue
+* `Enqueue` Adds a value to the back of the queue.
+* `Dequeeue` Removes a value from the front of the queue.
 * `PeekQ` Returns the value at the front of the queue, giving you a "peek".
