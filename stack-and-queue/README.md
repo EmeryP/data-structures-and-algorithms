@@ -21,3 +21,16 @@ My approach was to use a Node constructor and each time I pushed a Node to the S
 * `Enqueue` Adds a value to the back of the queue.
 * `Dequeeue` Removes a value from the front of the queue.
 * `PeekQ` Returns the value at the front of the queue, giving you a "peek".
+
+
+# 
+# Queue with Stack
+Manipulating a Stack so it functions the way a queue would function.
+
+## Challenge
+Create a brand new `PseudoQueue` class. Do not use an existing Queue. Instead, this `PseudoQueue` class will implement the standard queue interface, but will internally only utilize 2 Stack objects. Ensure that you create your class with the following methods: `enqueue` & `dequeue`. The `Stack` instances have only `push`, `pop` and `peek`.
+
+## Solution
+
+![Whiteboard](./assets/queue-with-stack.jpg)
+
