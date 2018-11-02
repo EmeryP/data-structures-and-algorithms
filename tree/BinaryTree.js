@@ -6,15 +6,18 @@ class BinaryTree {
   preOrder(node = this.root){
     // need to insert a node here
     this.logNodePre(node);
-    return;
   }
   
   logNodePre(node){
+    // let preOrderStorage = [];
     if(!node) return;
     //pre order
     console.log(node.value); //log thyself
     this.logNodePre(node.left); //visit left
     this.logNodePre(node.right); //visit right
+    // return preOrderStorage.push();
+    // console.log(this.root.value);
+
   }
 
 

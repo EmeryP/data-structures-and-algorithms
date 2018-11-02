@@ -1,3 +1,12 @@
+class Node {
+
+  constructor(value, left = null, right = null){
+    this.value = value;
+    this.left = left;
+    this.right = right;
+  }
+}
+
 class BST {
   constructor(){
     this.root = null;
@@ -28,8 +37,20 @@ class BST {
           return null;
         }
       };
+      return searchTree(node);
     }
   }
 
 }
+
+let BSTD = new BST();
+
+BSTD.add(10);
+BSTD.add(1000);
+BSTD.add(100);
+BSTD.add(1);
+console.log(BSTD);
+
+
+module.exports = BSTD;
 
