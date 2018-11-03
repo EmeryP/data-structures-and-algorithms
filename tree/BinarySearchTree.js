@@ -41,15 +41,32 @@ class BST {
     }
   }
 
+  search(value){
+    let current = this.root;
+    while(current.value !== value){ 
+      if(value < current.value){ 
+        current = current.left;
+      } else {
+        current = current.right;
+      }
+      if(current === null){
+        return null;
+      }
+    }
+    return current;
+  } 
+
 }
 
 let BSTD = new BST();
 
 BSTD.add(10);
+BSTD.add(5);
+BSTD.add(9);
 BSTD.add(1000);
 BSTD.add(100);
 BSTD.add(1);
-console.log(BSTD);
+BSTD.search(1000);
 
 
 module.exports = BSTD;
