@@ -1,17 +1,27 @@
 
+// import BinaryTree from './BinaryTree';
+// import Node from './Node';
+
 const BinaryTree = require('./BinaryTree.js');
 const Node = require('./Node.js');
-const BinarySearchTree = require('./BinarySearchTree');
 
 const apples = new Node('Apples');
 const bananas = new Node('Bananas');
 const cucumbers = new Node('Cucumbers');
+const pears = new Node('Pears');
+const cabbage = new Node('Cabbages');
+const grape = new Node('Grapes');
+const plum = new Node('Plums');
 
-const tree = new BinarySearchTree(apples);
+const tree = new BinaryTree(apples);
 apples.left = bananas;
 apples.right = cucumbers;
+bananas.left = pears;
+bananas.right = cabbage;
+cucumbers.left = grape;
+grape.right = plum;
 
 
 tree.preOrder();
-// tree.postOrder();
 // tree.inOrder();
+// tree.postOrder();

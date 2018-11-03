@@ -1,15 +1,9 @@
-class Node {
 
-  constructor(value, left = null, right = null){
-    this.value = value;
-    this.left = left;
-    this.right = right;
-  }
-}
+const Node = require('./Node');
 
 class BST {
-  constructor(){
-    this.root = null;
+  constructor(root = null){
+    this.root = root;
   }
 
   add(value){
@@ -60,14 +54,17 @@ class BST {
 
 let BSTD = new BST();
 
+BSTD.add(50);
+BSTD.add(70);
+BSTD.add(40);
+BSTD.add(60);
+BSTD.add(30);
 BSTD.add(10);
-BSTD.add(5);
-BSTD.add(9);
-BSTD.add(1000);
-BSTD.add(100);
-BSTD.add(1);
-BSTD.search(1000);
+console.log(BSTD);
 
+console.log(BSTD.search(70));
 
 module.exports = BSTD;
+
+// export default BSTD;
 

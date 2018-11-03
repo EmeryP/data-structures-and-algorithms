@@ -1,53 +1,55 @@
+
+
 class BinaryTree {
   constructor(root = null){
     this.root = root;
+    this.storage = [];
   }
 
+
   preOrder(node = this.root){
-    // need to insert a node here
     this.logNodePre(node);
+    this.storage.unshift(this.root);
+    console.log(this.storage);
+    return this.storage;
   }
   
   logNodePre(node){
-    // let preOrderStorage = [];
     if(!node) return;
-    //pre order
     console.log(node.value); //log thyself
     this.logNodePre(node.left); //visit left
     this.logNodePre(node.right); //visit right
-    // return preOrderStorage.push();
-    // console.log(this.root.value);
-
   }
 
 
   postOrder(node = this.root){
-    // need to insert a node here
     this.logNodePost(node);
-    return;
+    this.storage.unshift(this.root);
+    // console.log(this.storage);
+    return this.storage;
   }
   
   logNodePost(node){
     if(!node) return;
-    //post order
     this.logNodePost(node.left); //visit left
     this.logNodePost(node.right); //visit right
     console.log(node.value); //log thyself
   }
 
+
   inOrder(node = this.root){
-    // need to insert a node here
     this.logNodeIn(node);
-    return;
+    this.storage.unshift(this.root);
+    // console.log(this.storage);
+    return this.storage;
   }
   
   logNodeIn(node){
     if(!node) return;
-    //in order
     this.logNodeIn(node.left); //visit left
     console.log(node.value); //log thyself
     this.logNodeIn(node.right); //visit right
   }
 }
-
+// export default BinaryTree;
 module.exports = BinaryTree;
