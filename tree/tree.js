@@ -1,7 +1,4 @@
 
-// import BinaryTree from './BinaryTree';
-// import Node from './Node';
-
 const BinaryTree = require('./BinaryTree.js');
 const Node = require('./Node.js');
 
@@ -21,7 +18,4 @@ bananas.right = cabbage;
 cucumbers.left = grape;
 grape.right = plum;
 
-
-tree.preOrder();
-// tree.inOrder();
-// tree.postOrder();
+module.exports = tree;

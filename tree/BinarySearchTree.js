@@ -52,19 +52,6 @@ class BST {
 
 }
 
-let BSTD = new BST();
+module.exports = BST;
 
-BSTD.add(50);
-BSTD.add(70);
-BSTD.add(40);
-BSTD.add(60);
-BSTD.add(30);
-BSTD.add(10);
-console.log(BSTD);
-
-console.log(BSTD.search(70));
-
-module.exports = BSTD;
-
-// export default BSTD;
 

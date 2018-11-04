@@ -44,7 +44,6 @@ describe('Trees', () => {
       });
       it('will test if root\'s right is equal to cucumbers  after inOrder is invoked', () => {
         tree.inOrder();
-        // console.log(tree.root.right.value);
         expect(tree.root.right.value).toBe('Cucumbers');
       });
       it('will test if preOrder is defined after inOrder is invoked', () => {
@@ -60,7 +59,6 @@ describe('Trees', () => {
       });
       it('will test if root\'s right is equal to cucumbers after postOrder is invoked', () => {
         tree.inOrder();
-        // console.log(tree.root.right.value);
         expect(tree.root.right.value).toBe('Cucumbers');
       });
       it('will test if preOrder is defined after postOrder is invoked', () => {
