@@ -18,4 +18,16 @@ bananas.right = cabbage;
 cucumbers.left = grape;
 grape.right = plum;
 
+const ten = new Node(10);
+const five = new Node(5);
+const thirty = new Node(30);
+
+const nod = new BinaryTree(ten);
+ten.left = five;
+ten.right = thirty;
+
+
+nod.preOrder();
+
+
 module.exports = tree;

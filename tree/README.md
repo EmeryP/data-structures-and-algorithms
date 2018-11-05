@@ -33,3 +33,18 @@ Binary Tree and Binary Search Tree manipulation
 * https://khan4019.github.io/front-end-Interview-Questions/bst.html
 * https://www.tutorialspoint.com/Pre-order-traversal-in-a-Javascript-Tree
 
+
+# FizzBuzz Tree
+Write a FizzBuzz algorithm on a tree
+
+## Challenge
+Without utilizing any of the built-in methods available to your language, determine weather or not the value of each node is divisible by 3, 5 or both, and change the value of each of the nodes respectively. Return the tree with it’s news values.
+
+## Approach & Efficiency
+Our approach was to use a recursive pre-order search algorithm. The Big O for both time is O(n) and for space it's and O(1). 
+
+## Solution
+![Whiteboard](./assets/fizzBuzzTreeWhiteboard.jpg)
+
+
+
