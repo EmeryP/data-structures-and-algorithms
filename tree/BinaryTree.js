@@ -9,13 +9,18 @@ class BinaryTree {
 
   preOrder(node = this.root){
     this.logNodePre(node);
+
     this.storage.unshift(this.root);
+    console.log(this.storage);
     return this.storage;
   }
   
   logNodePre(node){
     if(!node) return;
-    this.logNodePre(node.value); 
+    this.logNodePre(node.value);
+    if(node.value % 15 === 0){ node.value = 'fizz buzz';}
+    if(node.value % 5 === 0){ node.value = 'buzz';}
+    if(node.value % 3 === 0){ node.value = 'fizz';}
     this.logNodePre(node.left); 
     this.logNodePre(node.right); 
   }
