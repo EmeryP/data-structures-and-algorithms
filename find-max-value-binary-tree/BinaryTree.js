@@ -7,19 +7,19 @@ class BinaryTree {
   }
   
   
-  preOrder(node = this.root){
+  maxValBinTree(node = this.root){
     this.maxValue = 0;
-    this.logNodePre(node);
+    this.maxValBinTreeHelper(node);
     // console.log(this.maxValue);
     return this.maxValue;
   }
   
-  logNodePre(node){
+  maxValBinTreeHelper(node){
     if(!node) return;
-    this.logNodePre(node.value);
+    this.maxValBinTreeHelper(node.value);
     if(node.value > this.maxValue){ this.maxValue = node.value;}
-    this.logNodePre(node.left);
-    this.logNodePre(node.right);
+    this.maxValBinTreeHelper(node.left);
+    this.maxValBinTreeHelper(node.right);
   }
 }
 module.exports = BinaryTree;
