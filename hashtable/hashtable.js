@@ -37,6 +37,7 @@ class Hashmap {
     let hash = this.find(key[i]);
     console.log(hash)
     // return this.map[hash];
+    //use find method 
   }
 
 } 
