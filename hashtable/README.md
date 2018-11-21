@@ -2,8 +2,10 @@
 =================================================
 
 ## Project Name
+Hashtable
 
-### Author: Student/Group Name
+### Author:
+Emery Parks
 
 ### Links and Resources
 * [repo](http://xyz.com)
@@ -24,19 +26,12 @@ Usage Notes or examples
 
 
 ### Setup
-#### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
 
 #### Running the app
-* `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
+* Running `node hashtable.js` from the root directory of the app will log out the result of the different functions
 
 #### Tests
-* How do you run tests?
+* Tests are yet to come
 * What assertions were made?
 * What assertions need to be / should be made?
 
