@@ -24,19 +24,19 @@ class Hashmap {
 
   find(key){
     let hash = this.hash(key)
-    return this.map[hash];
+    return this.map[hash][0][key];
   }
 
   contains(key){
     if(this.find(key)){
-      return 'key currently exists in table';
-    } return 'key not found';
+      return true;
+    } return false;
   }
 
   getHash(key){
-    let hash = this.find(key[i]);
-    console.log(hash)
-    // return this.map[hash];
+    let hash = this.hash(key);
+
+    return this.map.indexOf(this.map[hash]);
   }
 
 } 
@@ -45,5 +45,4 @@ let hm = new Hashmap(500);
 hm.add('emery', 'parent');
 hm.add('dax', 'child');
 
-console.log(hm.map.findIndex(find('emery')));
-// console.log(hm.find('emery'));
+console.log(hm.getHash('emery'));
