@@ -1,7 +1,4 @@
-
 'use strict';
-
-const util = require('util');
 
 class Hashmap {
 
@@ -16,9 +13,7 @@ class Hashmap {
 
   add(key, value){
     let hash = this.hash(key);
-
     if(! this.map[hash]){this.map[hash] = [];}
-
     this.map[hash].push({[key]: value})
   }
 
@@ -28,21 +23,21 @@ class Hashmap {
   }
 
   contains(key){
-    if(this.find(key)){
-      return true;
-    } return false;
+    try {
+      if(this.find(key)){
+        return true;
+      } 
+    } catch (error) {
+      return false;
+    }
   }
+
 
   getHash(key){
     let hash = this.hash(key);
-
-    return this.map.indexOf(this.map[hash]);
+    return hash;
   }
 
-} 
+}
 
-let hm = new Hashmap(500);
-hm.add('emery', 'parent');
-hm.add('dax', 'child');
-
-console.log(hm.getHash('emery'));
+module.exports = Hashmap;

@@ -1,39 +1,20 @@
+# Hashtables
+A hashtable and methods to work with a hashtable.
 
-=================================================
+## Challenge
+Implement a Hashtable with the following capabilities:
 
-## Project Name
-Hashtable
-
-### Author:
-Emery Parks
-
-### Links and Resources
-* [repo](http://xyz.com)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com)
-* [front-end](http://xyz.com)
-
-### Modules
-
-#### `modulename.js`
-##### Exported Values and Methods
-
-###### `foo(thing) -> string`
-Usage Notes or examples
-
-###### `bar(array) -> array`
-Usage Notes or examples
+* A method/function named `add` that takes in both the key and value. This method should hash the key and add the key and value pair to the table.
+* A method/function named `find` that takes in the key and returns the value from key/value pair.
+* A method/function named `contains` that takes in the key and returns if the key exists in the table already.
+* A method/function named `getHash` that takes in a key and returns the index in the array the key is stored.
 
 
-### Setup
+## API
+* `add(<key to add, value to add>)` will hash and add the thing to add to the hashtable. No return value.
+* `find(<key of item to find>)` will return the value of the key of the item to find.
+* `contains(<key>)` will return `true` if the hashtable contains the key you searched for otherwise it'll return `false` if the key doesnt exist in the hashtable.
+* `getHash(<key>)` will return the index in the array the key is stored.
 
-#### Running the app
-* Running `node hashtable.js` from the root directory of the app will log out the result of the different functions
-
-#### Tests
-* Tests are yet to come
-* What assertions were made?
-* What assertions need to be / should be made?
-
-#### UML
-Link to an image of the UML for your application and response to events
+## Credits
+Code Fellows instructors John & Allie
