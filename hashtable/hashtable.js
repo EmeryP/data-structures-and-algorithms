@@ -1,7 +1,4 @@
-
 'use strict';
-
-const util = require('util');
 
 class Hashmap {
 
@@ -16,35 +13,31 @@ class Hashmap {
 
   add(key, value){
     let hash = this.hash(key);
-
     if(! this.map[hash]){this.map[hash] = [];}
-
     this.map[hash].push({[key]: value})
   }
 
   find(key){
     let hash = this.hash(key)
-    return this.map[hash];
+    return this.map[hash][0][key];
   }
 
   contains(key){
-    if(this.find(key)){
-      return 'key currently exists in table';
-    } return 'key not found';
+    try {
+      if(this.find(key)){
+        return true;
+      } 
+    } catch (error) {
+      return false;
+    }
   }
+
 
   getHash(key){
-    let hash = this.find(key[i]);
-    console.log(hash)
-    // return this.map[hash];
-    //use find method 
+    let hash = this.hash(key);
+    return hash;
   }
 
-} 
+}
 
-let hm = new Hashmap(500);
-hm.add('emery', 'parent');
-hm.add('dax', 'child');
-
-console.log(hm.map.findIndex(find('emery')));
-// console.log(hm.find('emery'));
+module.exports = Hashmap;
