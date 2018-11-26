@@ -44,9 +44,9 @@ class Hashmap {
     return hash;
   }
 
-  // serialize(hashmap){
-  //   hashmap.stringify();
-  // }
+  serialize(hashmap){
+    return JSON.stringify(hashmap);
+  }
 
   // deSerialize(hashmap){
     
@@ -54,17 +54,17 @@ class Hashmap {
 
 }
 
-// let hm = new Hashmap(10);
+let hm = new Hashmap(1);
 // hm.add('truck', 'silverado')
 // hm.add('car', 'corvette')
 
-// hm.add('a', 1);
-// hm.add('b', 2);
-// hm.add('c', 3);
-// hm.add('d', 4);
+hm.add('a', 1);
+hm.add('b', 2);
+hm.add('c', 3);
+hm.add('d', 4);
 // expect(hm.find('b')).toBe(2);
 
-// console.log(hm.find('d'))
+console.log(hm.serialize(hm))
 // let stringified = JSON.stringify(hm);
 // console.log(stringified)
 // console.log(JSON.parse(stringified))

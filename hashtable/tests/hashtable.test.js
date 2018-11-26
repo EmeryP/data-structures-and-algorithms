@@ -105,4 +105,29 @@ describe('Hashtables', () => {
       expect(hm.getHash('turkey')).toEqual(76);
     })
   })
+
+  describe('serialize', () => {
+    it('should return the stringified hashmap', () => {
+      let hm = new Hashmap(1);
+      hm.add('truck', 'silverado');
+      hm.add('car', 'mustang');
+      console.log(hm.serialize(hm))
+      expect(hm.serialize(hm)).toEqual({'size':1,'map':[[{'truck':'silverado'},{'car':'mustang'}]]});
+    })
+
+    xit('should return the corrected hash if the size of the hashmap changes', () => {
+      let hm = new Hashmap(200);
+      hm.add('truck', 'silverado');
+      hm.add('car', 'mustang');
+      expect(hm.getHash('truck')).toEqual(153);
+    })
+
+    xit('should return a different hash for a different key', () => {
+      let hm = new Hashmap(100);
+      hm.add('truck', 'f150');
+      hm.add('car', 'camry');
+      hm.add('turkey', 'german')
+      expect(hm.getHash('turkey')).toEqual(76);
+    })
+  })
 })
