@@ -58,13 +58,13 @@ let hm = new Hashmap(1);
 // hm.add('truck', 'silverado')
 // hm.add('car', 'corvette')
 
-hm.add('a', 1);
-hm.add('b', 2);
-hm.add('c', 3);
-hm.add('d', 4);
+hm.add('a');
+hm.add('b');
+// hm.add('c', 3);
+// hm.add('d', 4);
 // expect(hm.find('b')).toBe(2);
-
-console.log(hm.serialize(hm))
+console.log(hm)
+// console.log(hm.serialize(hm))
 // let stringified = JSON.stringify(hm);
 // console.log(stringified)
 // console.log(JSON.parse(stringified))

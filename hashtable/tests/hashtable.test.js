@@ -112,7 +112,7 @@ describe('Hashtables', () => {
       hm.add('truck', 'silverado');
       hm.add('car', 'mustang');
       console.log(hm.serialize(hm))
-      expect(hm.serialize(hm)).toEqual({'size':1,'map':[[{'truck':'silverado'},{'car':'mustang'}]]});
+      expect(hm.serialize(hm)).toContain({'size':1,'map':[[{'truck':'silverado'},{'car':'mustang'}]]});
     })
 
     xit('should return the corrected hash if the size of the hashmap changes', () => {
