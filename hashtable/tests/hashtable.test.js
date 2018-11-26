@@ -49,8 +49,8 @@ describe('Hashtables', () => {
       expect(hm.find('car')).toEqual('mustang');
     })
 
-    it('should find the correct value when searching for a key in the hashtable', () => {
-      let hm = new Hashmap(50);
+    it('should find the correct value when searching for a key in a hashtable with a size of 1', () => {
+      let hm = new Hashmap(1);
       hm.add('truck', 'f150');
       hm.add('car', 'camry');
       hm.add('turkey', 'german')
@@ -74,7 +74,7 @@ describe('Hashtables', () => {
     })
 
     it('should return true', () => {
-      let hm = new Hashmap(10);
+      let hm = new Hashmap(1);
       hm.add('truck', 'f150');
       hm.add('car', 'camry');
       hm.add('turkey', 'german')
