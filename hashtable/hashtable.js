@@ -19,7 +19,13 @@ class Hashmap {
 
   find(key){
     let hash = this.hash(key)
-    return this.map[hash][0][key];
+    let keyArr = this.map[hash]
+    for (let i = 0; i < keyArr.length; i++){
+      let lookupKey = keyArr[i][key];
+      if (lookupKey) {
+        return lookupKey;
+      }
+    }
   }
 
   contains(key){
@@ -38,6 +44,29 @@ class Hashmap {
     return hash;
   }
 
+  // serialize(hashmap){
+  //   hashmap.stringify();
+  // }
+
+  // deSerialize(hashmap){
+    
+  // }
+
 }
+
+// let hm = new Hashmap(10);
+// hm.add('truck', 'silverado')
+// hm.add('car', 'corvette')
+
+// hm.add('a', 1);
+// hm.add('b', 2);
+// hm.add('c', 3);
+// hm.add('d', 4);
+// expect(hm.find('b')).toBe(2);
+
+// console.log(hm.find('d'))
+// let stringified = JSON.stringify(hm);
+// console.log(stringified)
+// console.log(JSON.parse(stringified))
 
 module.exports = Hashmap;
