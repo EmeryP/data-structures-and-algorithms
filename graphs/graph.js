@@ -74,38 +74,41 @@ class Graph {
   }
 
   getNodes(){
-    return this._adjacencyList;
+    return [...this._adjacencyList.keys()];
   }
   
 }
 
-const graph = new Graph();
+module.exports =  {Graph, Edge, Vertex};
 
-const ten = new Vertex(10);
-const two = new Vertex(2);
-const six = new Vertex(6);
-const seven = new Vertex(7);
-const three = new Vertex(3);
-const eight = new Vertex(8);
+// const graph = new Graph();
+// const vertex = new Vertex()
 
-graph.addVertex(ten);
-graph.addVertex(two);
-graph.addVertex(six);
-graph.addVertex(seven);
-graph.addVertex(three);
-graph.addVertex(eight);
+// const ten = new Vertex(10);
+// const two = new Vertex(2);
+// const six = new Vertex(6);
+// const seven = new Vertex(7);
+// const three = new Vertex(3);
+// const eight = new Vertex(8);
 
-graph.addDirectedEdge(ten, two);
-graph.addDirectedEdge(ten, six);
-graph.addDirectedEdge(ten, three);
+// graph.addVertex(ten);
+// graph.addVertex(two);
+// graph.addVertex(six);
+// graph.addVertex(seven);
+// graph.addVertex(three);
+// graph.addVertex(eight);
+
+// graph.addDirectedEdge(ten, two);
+// graph.addDirectedEdge(ten, six);
+// graph.addDirectedEdge(ten, three);
 // graph.addDirectedEdge(ten, seven);
-graph.addDirectedEdge(two, seven);
-graph.addDirectedEdge(six, seven);
-graph.addDirectedEdge(six, eight);
-graph.addDirectedEdge(three, eight);
-graph.addDirectedEdge(eight, seven);
+// graph.addDirectedEdge(two, seven);
+// graph.addDirectedEdge(six, seven);
+// graph.addDirectedEdge(six, eight);
+// graph.addDirectedEdge(three, eight);
+// graph.addDirectedEdge(eight, seven);
 
 
 // console.log(util.inspect(graph.bfs(ten), false, null, true));
-console.log(graph.getNodes())
+// console.log(graph)
 // console.log(util.inspect(graph.dfs(ten), false, null, true));
