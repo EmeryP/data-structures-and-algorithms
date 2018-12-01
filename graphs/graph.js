@@ -24,7 +24,7 @@ class Graph {
     this._adjacencyList.set(vertex, [])
   }
 
-  addDirectedEdge(startVertex, endVertex, weight = 0) {
+  addEdge(startVertex, endVertex, weight = 0) {
     if(!this._adjacencyList.has(startVertex) || !this._adjacencyList.has(endVertex)){
       throw new Error('__ERROR__ Invalid Node')
     }
