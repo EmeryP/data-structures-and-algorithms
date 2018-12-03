@@ -22,3 +22,10 @@ A different approach was used with each different method.
   * Is called on a graph and returns all of the nodes in the graph as a collection
 * `size()`
   * Returns the total number of nodes in the graph
+* `bfs()` traverses the graph in breadth first order and returns the collection of nodes in the order they were visited
+
+## Testing
+* Clone this repo to your local machine, run `npm install`, then run `npm test` to see the test results.
+
+
+![BreadthFirstWhiteboard](./assets/breadth-first.jpg)
