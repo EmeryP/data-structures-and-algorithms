@@ -55,32 +55,28 @@ class Hashmap {
 
     let filteredMap = parsedHM.map.filter( (value, idx) => {
         if(value !== null){
-          console.log(value[0].a)
-          // return value;
+          let key = Object.keys(value[0])[0];
+          let targetValue = value[0][key]
+          newHashmap.add(key, targetValue)
         }
-      })
-      // console.log(filteredMap)
-
-    for(let i = 0; i < filteredMap.length; i++){
-      console.log(filteredMap[i])
-    }
-    // console.log(newHashmap)
+    })
+    return newHashmap;
   }
-
 }
 
-let hm = new Hashmap(10);
+// let hm = new Hashmap(10);
 // hm.add('truck', 'silverado')
 // hm.add('car', 'corvette')
 
-hm.add('a', 1);
-hm.add('b', 2);
-hm.add('c', 3);
-hm.add('d', 4);
+// hm.add('a', 1);
+// hm.add('b', 2);
+// hm.add('c', 3);
+// hm.add('d', 4);
+// console.log(hm)
 // expect(hm.find('b')).toBe(2);
 
 // console.log(hm.serialize(hm))
-console.log(hm.deSerialize(hm))
+// console.log(hm.deSerialize(hm))
 // let stringified = JSON.stringify(hm);
 // console.log(stringified)
 // console.log(JSON.parse(stringified))
