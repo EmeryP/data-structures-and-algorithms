@@ -105,4 +105,31 @@ describe('Hashtables', () => {
       expect(hm.getHash('turkey')).toEqual(76);
     })
   })
+
+  describe('serialize', () => {
+    it('should return the stringified hashmap', () => {
+      let hm = new Hashmap(10);
+      hm.add('a',2);
+      hm.add('b', 4);
+      hm.add('c',6);
+      hm.add('d', 8);
+      expect(typeof hm.serialize(hm)).toEqual('string');
+    })
+
+    it('when parsed, size should still be 10', () => {
+      let hm = new Hashmap(10);
+      hm.add('a',2);
+      hm.add('b', 4);
+      hm.add('c',6);
+      hm.add('d', 8);
+      expect(JSON.parse(hm.serialize(hm)).size).toBe(10)
+    })
+
+    it('when parsed, should contain the hashmap object in full', () => {
+      let hm = new Hashmap(5);
+      hm.add('a',2);
+      hm.add('b', 4);
+      expect(JSON.parse(hm.serialize(hm))).toEqual({"map": [null, null, [{"a": 2}], [{"b": 4}], null], "size": 5})
+    })
+  })
 })
