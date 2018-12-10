@@ -62,7 +62,7 @@ class Graph {
         queue.push(neighborNode)
       }
     }
-    console.log(visitedNodes);
+    return visitedNodes;
   }
 
   dfs(startNode) {

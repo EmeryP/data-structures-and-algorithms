@@ -1,3 +1,4 @@
+const util = require('util');
 
 const {Graph, Edge, Vertex} = require('./graph.js');
 
@@ -174,6 +175,56 @@ describe('Graphs', () => {
     it('should return the correct size of the graph', () => {
       const graph = new Graph();
       expect(graph.size()).toBe(0)
+    })
+  })
+
+  describe('breadthFirstTraversal()', () => {
+    it('should return the proper length of the visited nodes set', () => {
+      const graph = new Graph();
+      const ten = new Vertex(10);
+      const nine = new Vertex(9);
+      const eight = new Vertex(8);
+      const seven = new Vertex(7);
+      graph.addVertex(ten);
+      graph.addVertex(nine);
+      graph.addVertex(eight);
+      graph.addVertex(seven);
+      graph.addEdge(ten, nine);
+      graph.addEdge(nine, eight);
+      graph.addEdge(eight, seven);
+      expect(graph.bfs(ten).size).toBe(4)
+    })
+
+    it('should return true being that ten was visited by the bfs method', () => {
+      const graph = new Graph();
+      const ten = new Vertex(10);
+      const nine = new Vertex(9);
+      const eight = new Vertex(8);
+      const seven = new Vertex(7);
+      graph.addVertex(ten);
+      graph.addVertex(nine);
+      graph.addVertex(eight);
+      graph.addVertex(seven);
+      graph.addEdge(ten, nine);
+      graph.addEdge(nine, eight);
+      graph.addEdge(eight, seven);
+      expect(graph.bfs(ten).has(ten)).toBe(true)
+    })
+
+    it('should return true being that seven was visited by the bfs method', () => {
+      const graph = new Graph();
+      const ten = new Vertex(10);
+      const nine = new Vertex(9);
+      const eight = new Vertex(8);
+      const seven = new Vertex(7);
+      graph.addVertex(ten);
+      graph.addVertex(nine);
+      graph.addVertex(eight);
+      graph.addVertex(seven);
+      graph.addEdge(ten, nine);
+      graph.addEdge(nine, eight);
+      graph.addEdge(eight, seven);
+      expect(graph.bfs(ten).has(seven)).toBe(true)
     })
   })
 
