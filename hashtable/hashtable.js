@@ -44,27 +44,43 @@ class Hashmap {
     return hash;
   }
 
-  // serialize(hashmap){
-  //   hashmap.stringify();
-  // }
+  serialize(hashmap){
+    return JSON.stringify(hashmap);
+  }
 
-  // deSerialize(hashmap){
-    
-  // }
+  deSerialize(hashmap){
+    let newHM = hashmap.serialize(hashmap)
+    let parsedHM = JSON.parse(newHM)
+    let newHashmap = new Hashmap(hashmap.size)
+
+    let filteredMap = parsedHM.map.filter( (value, idx) => {
+        if(value !== null){
+          // console.log(value, idx)
+          return value;
+        }
+      })
+      // console.log(filteredMap)
+
+    for(let i = 0; i < filteredMap.length; i++){
+      console.log(filteredMap[i])
+    }
+    // console.log(newHashmap)
+  }
 
 }
 
-// let hm = new Hashmap(10);
+let hm = new Hashmap(10);
 // hm.add('truck', 'silverado')
 // hm.add('car', 'corvette')
 
-// hm.add('a', 1);
-// hm.add('b', 2);
-// hm.add('c', 3);
-// hm.add('d', 4);
+hm.add('a', 1);
+hm.add('b', 2);
+hm.add('c', 3);
+hm.add('d', 4);
 // expect(hm.find('b')).toBe(2);
 
-// console.log(hm.find('d'))
+// console.log(hm.serialize(hm))
+console.log(hm.deSerialize(hm))
 // let stringified = JSON.stringify(hm);
 // console.log(stringified)
 // console.log(JSON.parse(stringified))
