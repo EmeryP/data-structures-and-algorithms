@@ -55,8 +55,8 @@ class Hashmap {
 
     let filteredMap = parsedHM.map.filter( (value, idx) => {
         if(value !== null){
-          // console.log(value, idx)
-          return value;
+          console.log(value[0].a)
+          // return value;
         }
       })
       // console.log(filteredMap)
