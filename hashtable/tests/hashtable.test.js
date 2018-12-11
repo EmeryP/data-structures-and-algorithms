@@ -134,30 +134,34 @@ describe('Hashtables', () => {
   })
 
   describe('deserialize', () => {
-    it('should return the stringified hashmap', () => {
+    it('should return the correct object in the correct position from the deserialized hashmap', () => {
       let hm = new Hashmap(5);
       hm.add('a',2);
       hm.add('b', 4);
       hm.add('c',6);
       hm.add('d', 8);
-      console.log(hm.deSerialize(hm))
-      // expect(typeof hm.serialize(hm)).toEqual('string');
+      let key = Object.keys(hm.deSerialize(hm).map[0][0]);
+      expect(hm.deSerialize(hm).map[0][0]).toEqual({ d: 8 });
     })
 
-    it('when parsed, size should still be 10', () => {
-      let hm = new Hashmap(10);
+    it('should return the correct key from a specific position in the deserialized hashmap', () => {
+      let hm = new Hashmap(5);
       hm.add('a',2);
       hm.add('b', 4);
       hm.add('c',6);
       hm.add('d', 8);
-      expect(JSON.parse(hm.serialize(hm)).size).toBe(10)
+      
+      let key = Object.keys(hm.deSerialize(hm).map[0][0]);
+      expect(key[0]).toEqual('d');
     })
 
-    it('when parsed, should contain the hashmap object in full', () => {
+    it('should return the size of the original hashmap', () => {
       let hm = new Hashmap(5);
       hm.add('a',2);
       hm.add('b', 4);
-      expect(JSON.parse(hm.serialize(hm))).toEqual({"map": [null, null, [{"a": 2}], [{"b": 4}], null], "size": 5})
+      hm.add('c',6);
+      hm.add('d', 8);
+      expect(hm.deSerialize(hm).size).toEqual(5);
     })
   })
 
