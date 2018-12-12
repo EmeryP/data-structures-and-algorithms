@@ -18,16 +18,27 @@ bananas.right = cabbage;
 cucumbers.left = grape;
 grape.right = plum;
 
-const ten = new Node(10);
-const five = new Node(5);
-const thirty = new Node(30);
+const three = new Node(3);
+const nine = new Node(9);
+const twenty = new Node(20);
+const fifteen = new Node(15);
+const seven = new Node(7);
+const four = new Node(4);
+const six = new Node(6);
 
-const nod = new BinaryTree(ten);
-ten.left = five;
-ten.right = thirty;
+const nodes = new BinaryTree(three);
+three.left = nine;
+three.right = twenty;
+twenty.right = seven;
+twenty.left = fifteen;
+fifteen.left = four;
+four.left = six;
 
 
-nod.preOrder();
+// console.log('tree inorder', tree.inOrder());
+
+console.log('maxHeight', nodes.maxHeight(nodes));
+// console.log('maxDepth', nodes.maxDepth());
 
 
 module.exports = tree;

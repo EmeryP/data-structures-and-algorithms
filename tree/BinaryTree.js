@@ -52,5 +52,41 @@ class BinaryTree {
     this.logNodeIn(node.value); 
     this.logNodeIn(node.right);
   }
+
+  //returns the height of the tree plus 1
+  maxDepth(node = this.root) {
+    if(node == null){
+      return 0;
+    } else {
+      let leftHeight = this.maxDepth(node.left);
+      let rightHeight = this.maxDepth(node.right);
+      return Math.max(leftHeight, rightHeight) + 1;
+    } 
+  }
+
+  //returns the correct height of the tree
+  maxHeight(tree){
+
+    let node = tree.root;
+    if(!node)return 0;
+    let max = 0;
+
+    function helper(node, height){
+      if(height > max){
+        max = height;
+      }
+      
+      if(node.left !== null){
+        helper(node.left, height + 1);
+      }
+      
+      if(node.right !== null){
+        helper(node.right, height + 1);
+      }
+    }
+    helper(node, 0);
+    return max;
+  }
+
 }
 module.exports = BinaryTree;
