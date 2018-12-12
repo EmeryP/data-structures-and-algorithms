@@ -132,4 +132,37 @@ describe('Hashtables', () => {
       expect(JSON.parse(hm.serialize(hm))).toEqual({"map": [null, null, [{"a": 2}], [{"b": 4}], null], "size": 5})
     })
   })
+
+  describe('deserialize', () => {
+    it('should return the correct object in the correct position from the deserialized hashmap', () => {
+      let hm = new Hashmap(5);
+      hm.add('a',2);
+      hm.add('b', 4);
+      hm.add('c',6);
+      hm.add('d', 8);
+      let key = Object.keys(hm.deSerialize(hm).map[0][0]);
+      expect(hm.deSerialize(hm).map[0][0]).toEqual({ d: 8 });
+    })
+
+    it('should return the correct key from a specific position in the deserialized hashmap', () => {
+      let hm = new Hashmap(5);
+      hm.add('a',2);
+      hm.add('b', 4);
+      hm.add('c',6);
+      hm.add('d', 8);
+      
+      let key = Object.keys(hm.deSerialize(hm).map[0][0]);
+      expect(key[0]).toEqual('d');
+    })
+
+    it('should return the size of the original hashmap', () => {
+      let hm = new Hashmap(5);
+      hm.add('a',2);
+      hm.add('b', 4);
+      hm.add('c',6);
+      hm.add('d', 8);
+      expect(hm.deSerialize(hm).size).toEqual(5);
+    })
+  })
+
 })
