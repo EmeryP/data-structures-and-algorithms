@@ -96,7 +96,31 @@ class LinkedList {
       // console.log(output);
       return output;
     }
+
+    reverse(linkedList){
+      let curr = linkedList.head;
+      let prev = null;
+      let temp = null;
+
+      while(curr){
+        temp = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = temp 
+      }
+      return prev;
+    }
   }
+  const list = new LinkedList();      
+      
+  list.insert(20)
+  list.insert(30)
+  list.insert(40)
+// console.log(list)
+  console.log(list.reverse(list));
+
+
+
 
 module.exports = LinkedList
 
