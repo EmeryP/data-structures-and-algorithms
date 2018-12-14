@@ -88,6 +88,37 @@ class BinaryTree {
     return max;
   }
 
+  maxSumHeight(tree) {
+
+    let node = tree.root;
+    if (!node) return null;
+    let maxHeight = 0;
+    let maxSum = 0;
+
+    function helper(node, sum, height) {
+      // console.log('height', height, 'sum', sum);
+      let newHeight = height + 1;
+      let newSum = sum + node.value;
+      
+      if (newHeight >= maxHeight) {
+        maxHeight = newHeight;
+        if(newSum > maxSum){
+          maxSum = newSum;
+        }
+      }
+      // console.log('newHeight', newHeight, 'maxHeight', maxHeight, 'newSum', newSum);
+      if (node.left !== null) {
+        helper(node.left, newSum, newHeight);
+      }
+
+      if (node.right !== null) {
+        helper(node.right, newSum, newHeight);
+      }
+    }
+    helper(node, maxSum, maxHeight);
+    return `${maxSum} + ${maxHeight}`;
+  }
+
   isBST(tree) {
     let node = tree.root;
     return this.isBSThelper(node, null, null);

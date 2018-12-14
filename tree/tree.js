@@ -27,23 +27,23 @@ const four = new Node(4);
 const six = new Node(6);
 
 // Will construct a Binary Tree
-// const nodes = new BinaryTree(three);
-// three.left = nine;
-// three.right = twenty;
-// twenty.right = seven;
-// twenty.left = fifteen;
-// fifteen.left = four;
-// four.left = six;
+const nodes = new BinaryTree(three);
+three.left = nine;
+three.right = twenty;
+twenty.right = seven;
+twenty.left = fifteen;
+fifteen.left = four;
+four.left = six;
 
 
 // Will construct a Binary Search Tree
-const nodes = new BinaryTree(seven);
-seven.left = six;
-seven.right = nine;
-six.left = four;
-four.left = three;
-nine.right = fifteen;
-fifteen.right = twenty;
+// const nodes = new BinaryTree(seven);
+// seven.left = six;
+// seven.right = nine;
+// six.left = four;
+// four.left = three;
+// nine.right = fifteen;
+// fifteen.right = twenty;
 
 
 //createTree will create a tree out of the following array
@@ -64,12 +64,13 @@ function createTreeHelper(arr, start, end) {
   return node;
 }
 
-console.log(createTree(arr));
+// console.log(createTree(arr));
 // console.log('tree inorder', tree.inOrder());
 // console.log(nodes);
 // console.log('isBST', nodes.isBST(nodes));
 // console.log('maxHeight', nodes.maxHeight(nodes));
 // console.log('maxDepth', nodes.maxDepth());
+console.log(nodes.maxSumHeight(nodes));
 
 
 module.exports = tree;
