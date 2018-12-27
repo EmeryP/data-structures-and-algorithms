@@ -1,4 +1,4 @@
-# data-structures-and-algorithms
+# DSA Challenge-01
 Code Fellows 401 daily whiteboard code-challenge-01
 
 ## Challenge
