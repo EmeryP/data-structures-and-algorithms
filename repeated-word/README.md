@@ -1,5 +1,5 @@
 # First repeated word
-Using hashmaps to store and find data
+Using a hashmap to store and find data
 
 ## Challenge
 * Write a function that accepts a lengthy string parameter.
