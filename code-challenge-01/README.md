@@ -11,4 +11,4 @@ Iterate through the input array and copy its values into a new array. When the i
 Emery Parks
 Ben Harris
 
-![Whiteboard](/assets/array-reverse.jpg)
+[Whiteboard](./assets/array-reverse.jpg)
