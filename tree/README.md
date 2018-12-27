@@ -15,7 +15,7 @@ Binary Tree and Binary Search Tree manipulation
 * The Big O of space for a Node insertion using a breadth first insertion method will be an O(w) where 'w' is the largest width of the tree. This is because the queue could contain all the nodes at the tree's widest point. 
 
 ## Testing setup
-1) Fork and download this repository to your local machine
+1) Fork and clone this repository to your local machine
 2) Navigate to the root directory where the `index.js` is located
 3) From your cmd line run `npm i`
 4) To run the tests; navigate into the `tests` directory and from your command line run `jest tree.test.js` and watch the magic happen.
@@ -27,7 +27,7 @@ Binary Tree and Binary Search Tree manipulation
 4) `inOrder()` will traverse through the tree in a left, root, right order.
 5) `postOrder()` will traverse through the tree in a left, right, root order.
 
-## Credits
+## Resources
 * https://www.youtube.com/watch?v=5cU1ILGy6dM
 * https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-15/resources/Trees.html
 * https://khan4019.github.io/front-end-Interview-Questions/bst.html
