@@ -7,8 +7,8 @@ The challenge was to write a function without using built in javascript methods 
 ## Solution 
 Iterate through the input array and copy its values into a new array. When the iterator reaches the half way point insert the input value to be added. 
 
+![Whiteboard Solution](./assets/array-reverse.jpg)
+
 ## Team
 Emery Parks
 Ben Harris
-
-[Whiteboard Solution](./assets/array-reverse.jpg)
