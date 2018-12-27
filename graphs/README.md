@@ -26,10 +26,11 @@ A different approach was used with each different method.
 * `getEdges(graph, array)` accepts a graph and an array as parameters. Will compare each element in the array with the immediate neighbors of a specified vertex and determine if the neighboring vertex includes the following element in the array. Will return a boolean and the total cost of the trip which adds the costs of each leg of the trip. This algorithm was created to solve for the following problem domain: 
   * Given a business trip itinerary, and an Alaska Airlines route map, is the trip possible with direct flights? If so, how much will the total trip cost be?
   * Write a function based on the specifications above, which takes in a graph, and an array of city names. Without utilizing any of the built-in methods available to your language, return whether the full trip is possible with direct flights, and how much it would cost.
-* 
 
 ## Testing
-* Clone this repo to your local machine, run `npm install`, then run `npm test` to see the test results.
+* Clone this repo to your local machine
+* Run `npm install` from your cmd line
+* Run `npm test` to view the test results
 
 
 # Solutions
