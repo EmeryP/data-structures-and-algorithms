@@ -1,5 +1,5 @@
 # DSA Challenge-03
-CF 401 code-challenge-03
+CF 401 DSA code-challenge-03
 
 ## Challenge
 The challenge was to write a function without using built in javascript methods to find an arbitrary value in an array. 
