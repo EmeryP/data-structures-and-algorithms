@@ -9,4 +9,4 @@ Write a breadth first traversal method which takes a Binary Tree as its unique i
 * Big O of space -> O(1) as we're only printing the contents of the tree so the number of nodes in the tree to number of nodes printed is a 1:1 relationship.
 
 ## Solution
-![Whiteboard](./assets/breadthFirstWhiteboard.jpg)
+[Whiteboard](./assets/breadthFirstWhiteboard.jpg)
