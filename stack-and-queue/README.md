@@ -6,7 +6,7 @@ Create a Stack class with the following methods, push, pop and peek. Create a Qu
 
 ## Approach & Efficiency
 
-My approach was to use a Node constructor and each time I pushed a Node to the Stack or Queue I would create a new node. My Stacks and Queues were stored/built on an array which allowed me to use the built in JS array methods. I used this approach because it seemed like a commonly used approach after briefly searching around for related examples on the internet. Using a linked list would have been a more efficient approach when considering time and space as the in the case of the Queue the array needs to reconstruct each time enqueue is invoked. I believe the Big O would be O(n). 
+My approach was to use a Node constructor and each time I pushed a Node to the Stack or Queue I would create a new node. My Stacks and Queues were stored/built on an array which allowed me to use the built in JS array methods. I used this approach because it seemed like a commonly used approach after briefly searching around for related examples on the internet.
 
 ## API
 
